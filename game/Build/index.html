@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div id="play">play</div>
+  <div id="play">loading</div>
   <div id="unity-container" class="unity-desktop">
     <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
     <div id="unity-loading-bar">
@@ -107,9 +107,9 @@
         progressBarFull.style.width = 100 * progress + "%";
       }).then((unityInstance) => {
         loadingBar.style.display = "none";
+        play.innerHTML = "play";
         play.onclick = () => {
           unityInstance.SetFullscreen(1);
-          
         }
       }).catch((message) => {
         alert(message);
