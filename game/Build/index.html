@@ -118,7 +118,16 @@
 
     document.body.appendChild(script);
     addEventListener("fullscreenchange", () => {
-      if(document.fullscreenElement){
+      if(document.fullscreenElement || document.webkitFullscreenEleement || document.webkitCurrentFullScreenElement){
+        play.style.display = "none";
+          container.style.display = "block";
+      } else {
+        play.style.display = "block";
+          container.style.display = "none";
+      }
+    })
+    addEventListener("webkitfullscreenchange", () => {
+      if(document.fullscreenElement || document.webkitFullscreenEleement || document.webkitCurrentFullScreenElement){
         play.style.display = "none";
           container.style.display = "block";
       } else {
