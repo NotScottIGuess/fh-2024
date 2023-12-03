@@ -16,10 +16,7 @@ body { padding: 0; margin: 0; background-color: rgb(87, 15, 15);
 #unity-fullscreen-button { cursor:pointer; float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
 #unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
 #play{
-    height: 100vh;
-    width: 100vw;
     text-align: center;
-    line-height: 100vh;
     font-size: 2vw;
     font-family: monospace;
     text-transform: uppercase;
